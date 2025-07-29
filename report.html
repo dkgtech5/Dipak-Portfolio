@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Report - Dipak Kumar Gupta</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+  /* Animation Keyframes */
+  @keyframes fadeSlideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(40px) scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  .report-card {
+    background-color: #111;
+    border: 1px solid #333;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2),
+                0 6px 6px rgba(0, 255, 255, 0.2),
+                inset 0 -1px 3px rgba(255, 255, 255, 0.1);
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeSlideIn 0.8s ease forwards;
+    opacity: 0;
+  }
+
+  .report-card:hover {
+    transform: perspective(800px) rotateX(4deg) rotateY(2deg);
+    box-shadow: 0 20px 40px rgba(0, 255, 255, 0.4),
+                0 8px 12px rgba(0, 255, 255, 0.3),
+                inset 0 -1px 5px rgba(255, 255, 255, 0.15);
+  }
+
+  .report-card h2 {
+    margin-bottom: 10px;
+    color: #00f7ff;
+  }
+
+  .report-card p {
+    margin: 10px 0;
+  }
+
+  .download-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+    background: linear-gradient(145deg, #00f7ff, #00c2cc);
+    color: #000;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 247, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeSlideIn 0.6s ease forwards;
+    opacity: 0;
+    animation-delay: 0.2s;
+  }
+
+  .download-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0, 247, 255, 0.7);
+  }
+</style>
+
+
+</head>
+<body>
+  <header>
+    <h1>📄 Report Section</h1>
+   <nav>
+      <ul>
+
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" >About</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="report.html" class="active">Report</a></li>
+        <li><a href="certificate.html">Certificate</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="report-card">
+      <h2>🔐 Evilbox Pentest Report</h2>
+      <p>I performed a penetration test on a vulnerable box named "Evilbox", where I discovered an RCE vulnerability, hidden malicious files, leaked credentials, and an exposed SSH key. This allowed full system compromise.</p>
+      <a href="images/EvilboxReportWritting.pdf" class="download-btn" download>📥 Download Evilbox Report (PDF)</a>
+    </section>
+
+    <section class="report-card">
+      <h2>💾 File Server Report</h2>
+      <p>This report documents how I accessed a file server using open ports, FTP, and SSH. I found shared folders, leaked passwords, and achieved full login through key injection.</p>
+      <a href="images/file server.pdf" class="download-btn" download>📥 Download File Server Report (PDF)</a>
+    </section>
+
+    <section class="report-card">
+      <h2>📝 Sample Company Audit Report (Demo)</h2>
+      <p>This is a demo report for a fictional ABC company. It includes web scanning, service enumeration, vulnerability findings, and suggestions to improve cybersecurity posture.</p>
+      <a href="demo_report.pdf" class="download-btn" download>📥 Download Demo Report (PDF)</a>
+    </section>
+  </main>
+</body>
+</html>

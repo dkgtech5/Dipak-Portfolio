@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume - Dipak Kumar Gupta</title>
+  <style>
+    /* === Resume Section === */
+    .resume-section {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 30px;
+      background: rgba(0, 255, 255, 0.05);
+      border-radius: 12px;
+      box-shadow: 0 0 15px cyan;
+    }
+
+    .resume-title {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 40px;
+      color: cyan;
+    }
+
+    .resume-block {
+      margin-bottom: 30px;
+    }
+
+    .resume-block h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #16a085;
+      border-bottom: 2px solid rgba(0, 255, 255, 0.3);
+      padding-bottom: 5px;
+    }
+
+    .resume-block p,
+    .resume-block ul {
+      font-size: 1rem;
+      color: #ddd;
+      line-height: 1.6;
+    }
+
+    .resume-block ul {
+      list-style: disc inside;
+      margin-top: 10px;
+    }
+
+    .resume-block ul li {
+      margin-bottom: 6px;
+    }
+
+    /* Scholarship block highlight */
+    .scholarship-block {
+      background-color: rgba(0, 255, 255, 0.08);
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+    }
+
+    /* Download button */
+    .download-btn-container {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .download-btn-container .btn {
+      padding: 12px 30px;
+      background: cyan;
+      color: #000;
+      font-weight: bold;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .download-btn-container .btn:hover {
+      background: #16a085;
+      color: #fff;
+    }
+
+    /* Basic page background and font color */
+    body {
+      background: #000;
+      font-family: Arial, sans-serif;
+      color: #eee;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header Styling */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background: rgba(0,0,0,0.6);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo-text {
+      color: cyan;
+      font-weight: 700;
+      font-size: 1.6rem;
+      letter-spacing: 2px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a.active,
+    nav ul li a:hover {
+      color: cyan;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <span class="logo-text">Dipak Kumar Gupta</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume.html" class="active">Resume</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="report.html">Report</a></li>
+        <li><a href="certificate.html">Certificate</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Resume Section -->
+  <section id="resume" class="resume-section">
+    <h2 class="resume-title">Resume</h2>
+
+    <div class="resume-block">
+      <h3>Career Objective</h3>
+      <p>
+        To pursue a challenging role as an Ethical Hacker & Penetration Tester where I can apply my technical knowledge, problem-solving skills, and security expertise to help organizations identify and mitigate cyber threats effectively.
+      </p>
+    </div>
+
+    <div class="resume-block">
+      <h3>Education</h3>
+      <ul>
+        <li><strong>Bachelor in Software Engineering</strong> – Nepal College of Information Technology, Balkumari, Lalitpur (2023 – Present)</li>
+        <li><strong>+2 Science</strong> – National Infotech College, Birgunj, Parsa</li>
+      </ul>
+    </div>
+
+    <div class="resume-block scholarship-block">
+      <h3>Scholarship</h3>
+      <p>I received a <strong>full scholarship</strong> to pursue my Bachelor degree in Software Engineering.</p>
+    </div>
+
+    <div class="resume-block">
+      <h3>Certifications</h3>
+      <ul>
+        <li>CEH v13 with AI</li>
+      </ul>
+    </div>
+
+    <div class="resume-block">
+      <h3>Technical Skills</h3>
+      <ul>
+        <li>Python Programming</li>
+        <li>Report Writing</li>
+        <li>Ethical Hacking Tools (Nmap, Metasploit, Burp Suite, Wireshark)</li>
+        <li>Linux Administration</li>
+        <li>Basic Networking & Web Security</li>
+      </ul>
+    </div>
+
+    <div class="resume-block">
+      <h3>Experience</h3>
+      <ul>
+        <li>5 Months Cybersecurity Training</li>
+        <li>3 Months Internship at SB Computer (Focused on Network Security & Vulnerability Testing)</li>
+      </ul>
+    </div>
+
+    <div class="resume-block">
+      <h3>Soft Skills</h3>
+      <ul>
+        <li>Strong communication and teamwork</li>
+        <li>Problem-solving mindset</li>
+        <li>Quick learner and adaptive</li>
+      </ul>
+    </div>
+
+    <div class="download-btn-container">
+      <a href="Dipak_Resume.pdf" class="btn" download>Download Resume</a>
+    </div>
+  </section>
+
+</body>
+</html>

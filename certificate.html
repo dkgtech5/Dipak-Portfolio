@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Certificates - Dipak Kumar Gupta</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+/* === Certificate Section Styles === */
+#certificate {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 20px;
+  color: #eee;
+}
+
+#certificate h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  color: cyan;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+/* Grid container for certificates: 2 columns */
+.certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+/* Each certificate card */
+.certificate-card {
+  background: rgba(0, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px cyan;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect on cards */
+.certificate-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px cyan;
+}
+
+/* Certificate images */
+.certificate-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 15px cyan;
+  margin-bottom: 15px;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+}
+
+/* Certificate description */
+.certificate-card p {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.4;
+}
+
+.certificate-card p strong {
+  color: cyan;
+  font-weight: 600;
+}
+
+/* Responsive: stack cards on small screens */
+@media (max-width: 600px) {
+  .certificate-grid {
+    grid-template-columns: 1fr;
+  }
+}
+  </style>
+</head>
+<body>
+ <header>
+    <div class="logo">
+      <span class="logo-text">Dipak Kumar Gupta</span>
+    </div>
+    <nav>
+      <ul>
+
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" >About</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="report.html">Report</a></li>
+        <li><a href="certificate.html" class="active">Certificate</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Navigation bar -->
+ 
+  <section id="certificate" class="section">
+    <h2>Certificates & Achievements</h2>
+    <div class="certificate-grid">
+      <div class="certificate-card">
+        <img src="images/noskparticipate.jpeg" alt="Hackathon at NCIT" />
+        <p><strong>Hackathon Participation</strong><br />Participated in Hackathon event organized by NCIT College, focusing on innovation and development.</p>
+      </div>
+      <div class="certificate-card">
+        <img src="images/hultprize.jpeg" alt="Hult Prize at NCIT" />
+        <p><strong>Hult Prize Competition</strong><br />Engaged in the Hult Prize campus round at NCIT, presenting solutions for global social challenges.</p>
+      </div>
+      <div class="certificate-card">
+        <img src="images/nosk.jpeg" alt="Noskathon Tech Event" />
+        <p><strong>Noskathon Tech Event</strong><br />Participated in the Noskathon coding competition focused on cybersecurity and system design.</p>
+      </div>
+      <div class="certificate-card">
+        <img src="images/github.jpeg" alt="GitHub Bootcamp" />
+        <p><strong>GitHub Bootcamp</strong><br />Attended hands-on bootcamp workshop on GitHub, version control, and team collaboration workflows.</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

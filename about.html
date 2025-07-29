@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About - Dipak Kumar Gupta</title>
+  <style>
+    /* === Global Reset === */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+      color: #eee;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background: rgba(0,0,0,0.6);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: cyan;
+    }
+
+    .logo .logo-text {
+      color: cyan;
+      font-weight: 700;
+      font-size: 1.6rem;
+      letter-spacing: 2px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a.active,
+    nav ul li a:hover {
+      color: cyan;
+    }
+
+    /* === About Section === */
+    .about {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .about-title h2 {
+      font-size: 2.8rem;
+      text-align: center;
+      margin-bottom: 40px;
+      color: cyan;
+    }
+
+    .about-title h2 span {
+      color: #16a085;
+    }
+
+    .about-container {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .about-left {
+      flex: 1 1 350px;
+      max-width: 400px;
+      background-color: rgba(0, 255, 255, 0.05);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px cyan;
+    }
+
+    .profile-pic {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 15px cyan;
+      object-fit: cover;
+      aspect-ratio: 4 / 5;
+    }
+
+    .about-left p {
+      font-size: 1rem;
+      margin-bottom: 10px;
+      color: #ddd;
+    }
+
+    .about-left h3 {
+      margin-top: 30px;
+      margin-bottom: 15px;
+      color: cyan;
+    }
+
+    .skill {
+      margin-bottom: 20px;
+    }
+
+    .skill p {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #16a085;
+    }
+
+    .progress-bar {
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.1);
+      height: 16px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .progress {
+      height: 100%;
+      background: linear-gradient(90deg, cyan, #16a085);
+    }
+
+    .about-right {
+      flex: 2 1 500px;
+      background-color: rgba(0, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px cyan;
+      color: #eee;
+    }
+
+    .intro-text {
+      font-size: 1.1rem;
+      margin-bottom: 25px;
+      color: #eee;
+    }
+
+    .details p {
+      margin-bottom: 15px;
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    .details p strong {
+      color: cyan;
+    }
+
+    @media (max-width: 900px) {
+      .about-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .about-left,
+      .about-right {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with Navigation -->
+  <header>
+    <div class="logo">
+      <span class="logo-text">Dipak Kumar Gupta</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="report.html">Report</a></li>
+        <li><a href="certificate.html">Certificate</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="about-title">
+      <h2>About <span>Me</span></h2>
+    </div>
+
+    <div class="about-container">
+      <!-- Left Side -->
+      <div class="about-left">
+        <img src="images/Dipak.jpg" alt="Dipak Kumar Gupta" class="profile-pic" />
+        <p><strong>Name:</strong> Dipak Kumar Gupta</p>
+        <p><strong>Job Role:</strong> Ethical Hacking &amp; Pentesting</p>
+        <p><strong>Experience:</strong> 6 Months</p>
+        <p><strong>Address:</strong> Kathmandu, Nepal</p>
+
+        <h3>Core Skills</h3>
+        <div class="skill">
+          <p>Ethical Hacking Tools <span>90%</span></p>
+          <div class="progress-bar">
+            <div class="progress" style="width: 90%;"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <p>Penetration Testing <span>85%</span></p>
+          <div class="progress-bar">
+            <div class="progress" style="width: 85%;"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <p>Network Security <span>80%</span></p>
+          <div class="progress-bar">
+            <div class="progress" style="width: 80%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side -->
+      <div class="about-right">
+        <p class="intro-text">
+          I’m Dipak Kumar Gupta, a passionate Cybersecurity Enthusiast and aspiring Ethical Hacker.
+          I enjoy exploring vulnerabilities and making systems more secure. Currently, I am learning ethical hacking,
+          penetration testing, and secure coding practices with the goal of contributing to a safer digital world.
+        </p>
+        <div class="details">
+          <p><strong>Profile:</strong> Ethical Hacking &amp; Pentesting</p>
+          <p><strong>Secondary Education:</strong> +2, National Infotech College, Birgunj, Parsa</p>
+          <p><strong>Higher Education:</strong> Bachelor in Software Engineering (Ongoing), Nepal College of Information Technology, Balkumari, Lalitpur (2023–Present)</p>
+          <p><strong>Languages:</strong> Nepali, English, Hindi</p>
+          <p><strong>Other Skills:</strong> Linux, Networking, Burp Suite, Metasploit, Nmap, Report Writing</p>
+          <p><strong>Interests:</strong> Bug Bounty, Security Research, CTF Challenges</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

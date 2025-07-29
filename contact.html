@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact - Dipak Kumar Gupta</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  
+  <style>
+  /* ===== Contact Section ===== */
+  /* ===== Contact Section ===== */
+  /* ===== Contact Section ===== */
+  .contact-section {
+    max-width: 900px;
+    margin: 70px auto 100px;
+    padding: 0 20px;
+    color: #eee;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Section header */
+  .contact-section .section-header {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+  }
+
+  .contact-section h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #00ffff;
+    letter-spacing: 3px;
+    text-shadow:
+      0 0 10px #00ffff,
+      0 0 25px #00ffff;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .contact-section .section-bg-text {
+    font-size: 6rem;
+    font-weight: 900;
+    color: rgba(0, 255, 255, 0.05);
+    letter-spacing: 10px;
+    user-select: none;
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .contact-section p {
+    font-size: 1.2rem;
+    color: #a0f0f0;
+    font-style: italic;
+    margin-top: 5px;
+  }
+
+  /* Contact info grid */
+  .contact-info-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+  }
+
+  /* Individual info box */
+  .info-box {
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.12), rgba(0, 150, 150, 0.2));
+    border-radius: 16px;
+    padding: 30px 20px;
+    box-shadow:
+      0 0 15px rgba(0, 255, 255, 0.25),
+      inset 0 0 15px rgba(0, 255, 255, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+    flex: 1 1 200px;
+    min-width: 210px;
+  }
+
+  .info-box:hover {
+    transform: translateY(-10px);
+    box-shadow:
+      0 0 40px #00ffff,
+      inset 0 0 40px #00ffff;
+    z-index: 5;
+  }
+
+  /* Icon container */
+  .info-box .icon {
+    font-size: 3.5rem;
+    color: #00ffff;
+    margin-bottom: 15px;
+    text-shadow:
+      0 0 10px #00ffff,
+      0 0 25px #00ffff;
+    transition: color 0.3s ease;
+  }
+
+  /* Heading */
+  .info-box h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    color: #00ffff;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-shadow: 0 0 6px #00ffff;
+  }
+
+  /* Paragraph */
+  .info-box p {
+    font-size: 1.1rem;
+    color: #b0ffff;
+    word-break: break-word;
+  }
+
+  /* Social media section */
+  .social-media {
+    text-align: center;
+    color: #a0f0f0;
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    user-select: none;
+  }
+
+  .social-media p {
+    margin-bottom: 15px;
+  }
+
+  /* Social icons container */
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  /* Each social icon */
+  .social-icons a {
+    font-size: 2.5rem;
+    color: #00ffff;
+    transition: color 0.3s ease, transform 0.3s ease;
+    filter: drop-shadow(0 0 5px #00ffff);
+    user-select: none;
+  }
+
+  .social-icons a:hover {
+    color: #00ffffcc;
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 15px #00ffff);
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .contact-info-grid {
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .info-box {
+      flex: 1 1 100%;
+      max-width: 300px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .info-box .icon {
+      font-size: 3rem;
+    }
+
+    .social-icons {
+      gap: 20px;
+    }
+  }
+  </style>
+
+</head>
+<body>
+
+  <!-- Header and Navigation -->
+  <header>
+    <div class="logo">
+      <span class="logo-text">Dipak Kumar Gupta</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="report.html">Report</a></li>
+        <li><a href="certificate.html">Certificate</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Contact Me</h2>
+        <h1 class="section-bg-text">Contact</h1>
+        <p>Below are the details to reach out to me!</p>
+      </div>
+      <div class="contact-info-grid">
+        <div class="info-box">
+          <div class="icon">
+            <i class="fas fa-map-signs"></i>
+          </div>
+          <h3>Address</h3>
+          <p>Kathmandu, Nepal</p>
+        </div>
+        <div class="info-box">
+          <div class="icon">
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <h3>Contact Number</h3>
+          <p>+9779825226732</p>
+        </div>
+        <div class="info-box">
+          <div class="icon">
+            <i class="fas fa-paper-plane"></i>
+          </div>
+          <h3>Email Address</h3>
+          <p>dipakkumargupta893@gmail.com</p>
+        </div> 
+        
+      </div>  <!-- close contact-info-grid -->
+
+      <div class="social-icons">
+  <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+  <a href="https://www.linkedin.com/in/dkgtech/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+  <a href="https://github.com/dkgtech5" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+  <a href="https://www.facebook.com/dipak.kumar.gupta.451270" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://www.instagram.com/mr_d.k_kumar5/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+</div>
+
+    </div>
+  </section>
+
+</body>
+</html>

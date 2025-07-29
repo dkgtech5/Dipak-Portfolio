@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dipak Kumar Gupta</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> <!-- Typed.js CDN -->
+</head>
+<body>
+
+  <div class="bg-image"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">Dipak Kumar Gupta</div>
+    <nav class="nav">
+      <!-- Buttons on left side -->
+      <div id="controls">
+        <button onclick="startSystem()">▶ Start Attack</button>
+        <button onclick="toggleFlicker()">⚠ Toggle Alert</button>
+      </div>
+
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="report.html">Report</a></li>
+        <li><a href="certificate.html">Certificate</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="home">
+    <div class="animated-bg"></div>
+    <div class="home-container">
+      <div class="home-text">
+       <h1>Welcome to <span>Mr. DK World</span></h1>
+
+        <h2><span id="typed-text"></span></h2>
+        <p>Cybersecurity enthusiast passionate about ethical hacking, penetration testing, and digital defense.</p>
+      </div>
+
+      <!-- HUD Animation -->
+      <div class="hud-container">
+        <div class="outer-ring"></div>
+        <div class="middle-ring"></div>
+
+        <div class="inner-ring">
+          <img src="images/Dipak.jpg" alt="Center Photo" class="center-photo" />
+        </div>
+
+        <div class="tick-layer tick1"></div>
+        <div class="tick-layer tick2"></div>
+        <div class="scan-line"></div>
+        <div class="radial-lines"></div>
+        <div class="extra-ring ring1"></div>
+        <div class="extra-ring ring2"></div>
+        <div class="extra-ring ring3"></div>
+        <div class="nodes">
+          <div class="node" style="top:10%; left:50%;"></div>
+          <div class="node" style="top:80%; left:70%;"></div>
+          <div class="node" style="top:60%; left:20%;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hacker Terminal Elements -->
+  <div id="loading">WAITING<span id="dots"></span></div>
+  <canvas id="matrixCanvas"></canvas>
+  <div id="typing"></div>
+
+  <audio id="typeSound" src="data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAIlYAAESsAAACABAAZGF0YQAAAAA="></audio>
+
+  <script>
+    // Typed.js typing effect
+    const colors = ['#00ffff', '#39ff14', '#e74c3c'];
+
+    const typed = new Typed("#typed-text", {
+      strings: ["Cybersecurity Enthusiast", "Ethical Hacker", "Pentester"],
+      typeSpeed: 60,
+      backSpeed: 40,
+      loop: true,
+      onStringTyped: (arrayPos, self) => {
+        const typedEl = document.getElementById('typed-text');
+        typedEl.style.color = colors[arrayPos % colors.length];
+      }
+    });
+
+    const loading = document.getElementById("loading");
+    const dots = document.getElementById("dots");
+    const body = document.body;
+
+    let dotCount = 0;
+    const dotInterval = setInterval(() => {
+      dotCount = (dotCount + 1) % 4;
+      dots.innerText = '.'.repeat(dotCount);
+    }, 500);
+
+    function startSystem() {
+      clearInterval(dotInterval);
+      loading.style.display = "none";
+      document.getElementById("matrixCanvas").style.display = "block";
+      document.getElementById("typing").style.display = "block";
+      startMatrix();
+      startTyping();
+    }
+
+    function toggleFlicker() {
+      body.classList.toggle("flicker");
+    }
+
+    function startMatrix() {
+      const canvas = document.getElementById("matrixCanvas");
+      const ctx = canvas.getContext("2d");
+
+      function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+      resizeCanvas();
+      window.addEventListener("resize", resizeCanvas);
+
+      const fontSize = 16;
+      const columns = Math.floor(canvas.width / fontSize);
+      const drops = Array(columns).fill(1);
+      const chars = "01";
+
+      let hue = 0;
+
+      function drawMatrix() {
+        ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.fillStyle = `hsl(${hue}, 100%, 50%)`;
+        ctx.font = fontSize + "px monospace";
+
+        for (let i = 0; i < drops.length; i++) {
+          const text = chars[Math.floor(Math.random() * chars.length)];
+          const x = i * fontSize;
+          const y = drops[i] * fontSize;
+
+          ctx.fillText(text, x, y);
+
+          if (y > canvas.height && Math.random() > 0.975) drops[i] = 0;
+          drops[i]++;
+        }
+
+        hue = (hue + 1) % 360;
+      }
+
+      setInterval(drawMatrix, 33);
+    }
+
+    const typingDiv = document.getElementById("typing");
+    const hackingLines = [
+      "Initializing network sniffer...",
+      "Target IP located.",
+      "Brute forcing credentials...",
+      "Success: Password = hunter2",
+      "Injecting backdoor.exe...",
+      "Exfiltrating data...",
+      "Mission Complete."
+    ];
+
+    let lineIndex = 0;
+    let charIndex = 0;
+
+    function startTyping() {
+      typingDiv.innerText = "";
+      lineIndex = 0;
+      charIndex = 0;
+
+      function typeNextChar() {
+        if (lineIndex >= hackingLines.length) return;
+        const line = hackingLines[lineIndex];
+
+        if (charIndex < line.length) {
+          typingDiv.innerText += line.charAt(charIndex);
+          charIndex++;
+          setTimeout(typeNextChar, 60);
+        } else {
+          typingDiv.innerText += "\n";
+          charIndex = 0;
+          lineIndex++;
+          setTimeout(typeNextChar, 600);
+        }
+      }
+
+      typeNextChar();
+    }
+  </script>
+</body>
+</html>

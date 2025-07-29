@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cybersecurity Notes - Dipak Kumar Gupta</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* === Notes Section Styles - Embedded === */
+    #notes {
+      max-width: 1000px;
+      margin: 60px auto 80px auto;
+      padding: 0 20px;
+      color: #eee;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    #notes h2 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 25px;
+      color: #00ffff;
+      font-weight: 900;
+      letter-spacing: 3px;
+      text-shadow:
+        0 0 8px #00ffff,
+        0 0 20px #00ffff;
+    }
+
+    #notes p {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-bottom: 50px;
+      color: #a0f0f0;
+      font-style: italic;
+      text-shadow: 0 0 3px rgba(0, 255, 255, 0.3);
+    }
+
+    /* Grid container for notes */
+    .notes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+    }
+
+    /* Each note card */
+    .note-card {
+      background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(0, 150, 150, 0.15));
+      padding: 30px 30px 40px 30px;
+      border-radius: 20px;
+      box-shadow:
+        0 0 12px rgba(0, 255, 255, 0.3),
+        inset 0 0 15px rgba(0, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(0, 255, 255, 0.3);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      cursor: default;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Glow pulse animation */
+    @keyframes glowPulse {
+      0%, 100% {
+        box-shadow:
+          0 0 12px rgba(0, 255, 255, 0.3),
+          inset 0 0 15px rgba(0, 255, 255, 0.1);
+      }
+      50% {
+        box-shadow:
+          0 0 25px rgba(0, 255, 255, 0.6),
+          inset 0 0 25px rgba(0, 255, 255, 0.3);
+      }
+    }
+
+    .note-card:hover {
+      transform: translateY(-12px) scale(1.03);
+      box-shadow:
+        0 0 30px #00ffff,
+        inset 0 0 30px #00ffff;
+      animation: glowPulse 2s infinite ease-in-out;
+      z-index: 10;
+    }
+
+    /* Stylish heading inside card */
+    .note-card h3 {
+      color: #00ffff;
+      font-weight: 800;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      letter-spacing: 1.3px;
+      text-shadow:
+        0 0 5px #00ffff,
+        0 0 15px #00ffff;
+      position: relative;
+      z-index: 5;
+    }
+
+    /* List inside card */
+    .note-card ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .note-card ul li {
+      margin-bottom: 14px;
+      font-size: 1.05rem;
+      color: #b0ffff;
+      line-height: 1.5;
+      padding-left: 16px;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    /* Custom bullet points with glowing effect */
+    .note-card ul li::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: #00ffff;
+      text-shadow: 0 0 8px #00ffff;
+      font-weight: bold;
+      font-size: 1.2rem;
+      top: 2px;
+    }
+
+    .note-card ul li strong {
+      color: #00ffff;
+      font-weight: 700;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 480px) {
+      #notes h2 {
+        font-size: 2.4rem;
+      }
+      .note-card {
+        padding: 25px 20px 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <span class="logo-text">Dipak Kumar Gupta</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="report.html">Report</a></li>
+        <li><a href="certificate.html">Certificate</a></li>
+        <li><a href="notes.html" class="active">Notes</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="notes" class="section">
+    <h2>Cybersecurity Notes</h2>
+    <p>Below are some key notes and summaries from my learning journey in cybersecurity and ethical hacking.</p>
+    <div class="notes-grid">
+      <div class="note-card">
+        <h3>Linux Command Basics</h3>
+        <ul>
+          <li><strong>ls</strong> – List directory contents</li>
+          <li><strong>cd</strong> – Change directory</li>
+          <li><strong>chmod</strong> – Change file permissions</li>
+          <li><strong>netstat</strong> – Display network connections</li>
+        </ul>
+      </div>
+
+      <div class="note-card">
+        <h3>Nmap Scan Types</h3>
+        <ul>
+          <li><strong>nmap -sS</strong> – TCP SYN scan</li>
+          <li><strong>nmap -sV</strong> – Version detection</li>
+          <li><strong>nmap -A</strong> – Aggressive scan (OS, version, script)</li>
+          <li><strong>nmap -T4</strong> – Faster execution</li>
+        </ul>
+      </div>
+
+      <div class="note-card">
+        <h3>OWASP Top 10</h3>
+        <ul>
+          <li>1. Injection</li>
+          <li>2. Broken Authentication</li>
+          <li>3. Sensitive Data Exposure</li>
+          <li>4. Security Misconfiguration</li>
+          <li>5. XSS – Cross-site Scripting</li>
+        </ul>
+      </div>
+
+      <div class="note-card">
+        <h3>Tools & Usage</h3>
+        <ul>
+          <li><strong>Burp Suite</strong> – Intercept and modify web traffic</li>
+          <li><strong>Metasploit</strong> – Exploit development and testing</li>
+          <li><strong>Wireshark</strong> – Packet capture and analysis</li>
+          <li><strong>Hydra</strong> – Brute force login credentials</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
