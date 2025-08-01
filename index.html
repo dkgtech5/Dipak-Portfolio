@@ -77,7 +77,7 @@
   <canvas id="matrixCanvas"></canvas>
   <div id="typing"></div>
 
-  <audio id="typeSound" src="data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAIlYAAESsAAACABAAZGF0YQAAAAA="></audio>
+  <audio id="typeSound" src="images/hacksound.wav" loop></audio>
 
   <script>
     // Typed.js typing effect
@@ -111,12 +111,21 @@
       document.getElementById("typing").style.display = "block";
       startMatrix();
       startTyping();
+       const audio = document.getElementById("typeSound");
+  audio.volume = 0.5; // Optional: lower volume to 50%
+  audio.play(); 
     }
 
     function toggleFlicker() {
-      body.classList.toggle("flicker");
-    }
+    body.classList.toggle("flicker");
 
+    const audio = document.getElementById("typeSound");
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
     function startMatrix() {
       const canvas = document.getElementById("matrixCanvas");
       const ctx = canvas.getContext("2d");
